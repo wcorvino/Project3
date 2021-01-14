@@ -101,4 +101,30 @@ $ git remote -v
 check  ssh : ansible all -u cisco -m raw -a 'show version' -k -c ssh
 fix     keys : ex. R1 rsa regenerated crypto key generate rsa modulus 1024;
                    UbuntuServer-1 $ ssh-keygen -f "/root/.ssh/known_hosts" -R "r1"
+create ssh key
+ssh-keygen
+cd ~/.ssh
+ls
+cat id_rsa.pub
+copy key to clipboard, then goto git hub settings, tab name "SSH and CPG keys tab"
+and paste new key material.
 
+
+!!more git notes
+!!--------------------
+!! Local - where git init
+!! Remote - anyhost not git init
+
+!!new repo
+echo "# read me" >> README.md
+git init
+git add README.md
+git commit -m "first commit - file origin"
+git remote add origin http://github/wcorvino/<repo>.git
+git push -u origin master
+
+!! push an existing repo
+git remote add origin http://github/wcorvino/<repo>.git
+git push -u origin master
+
+!!
