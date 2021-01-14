@@ -129,4 +129,6 @@ git push -u origin master
 git remote add origin https://github.com/wcorvino/<repo>.git
 git push -u origin master
 
-!!
+!! pull existing using ssh, instead of http
+git remote set-url origin git@github.com:wcorvino/<repo>.git
+git pull
