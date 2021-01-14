@@ -97,4 +97,8 @@ $ git remote -v
 
 !!??new branch, merge ?
 
+!!ubuntu ssh know keys clean up
+check  ssh : ansible all -u cisco -m raw -a 'show version' -k -c ssh
+fix     keys : ex. R1 rsa regenerated crypto key generate rsa modulus 1024;
+                   UbuntuServer-1 $ ssh-keygen -f "/root/.ssh/known_hosts" -R "r1"
 
