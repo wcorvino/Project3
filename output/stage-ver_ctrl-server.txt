@@ -107,7 +107,9 @@ cd ~/.ssh
 ls
 cat id_rsa.pub
 copy key to clipboard, then goto git hub settings, tab name "SSH and CPG keys tab"
-and paste new key material.
+and paste new key material. This make ssh link operational, use ssh link 
+https : "https://github.com/wcorvino/<repo>.git"
+ssh   : "git@github.com:wcorvino/<repo>.git"  !! username/password - no longer required
 
 
 !!more git notes
@@ -120,11 +122,11 @@ echo "# read me" >> README.md
 git init
 git add README.md
 git commit -m "first commit - file origin"
-git remote add origin http://github/wcorvino/<repo>.git
+git remote add origin https://github.com/wcorvino/<repo>.git
 git push -u origin master
 
 !! push an existing repo
-git remote add origin http://github/wcorvino/<repo>.git
+git remote add origin https://github.com/wcorvino/<repo>.git
 git push -u origin master
 
 !!
